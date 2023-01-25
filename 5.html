@@ -22,6 +22,12 @@
             var cityID = document.form1.cmbCity.value;
             window.location.href="3.html?ID= " + cityID;
         }
+        function toplamHesapla()
+        {
+            dblFiyat = document.form1.dblFiyat.value;
+            dblKDV = document.form1.dblKDV.value;
+            document.form1.dblToplam.value = parseInt(dblFiyat) * (parseInt(dblKDV)+100) / 100;
+        }
     </script>
 
 </head>
@@ -40,11 +46,11 @@
                 <option value="4">Bursa</option>
             </select>
             <br /> <br />
-            <input type="text" name="dblFiyat" size="20" maxlength="5">
+            Fiyat<input type="text" name="dblFiyat" size="20" maxlength="5">
             <br /> <br />
-            <input type="text" name="dblKDV" size="20" maxlength="2">
+            KDV<input type="text" name="dblKDV" size="20" maxlength="2" onblur="javascript:toplamHesapla();">
             <br /> <br />
-            <input type="text" name="dblToplam" size="20" maxlength="5">
+            Toplam<input type="text" name="dblToplam" size="20" maxlength="5">
             <br /> <br />
             <input type="button" name="btnSubmit" value="Gönder" onclick="javascript:clickMe();">
         </form>

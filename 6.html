@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function printStars() {
+            var txtStars = "";
+            for (var i = 1; i <= 9; i++) 
+            {
+                for (var j = 1; j <= i; j++)
+                {
+                    txtStars = txtStars + "*";
+                }
+                txtStars = txtStars + "<br>";
+            }
+            document.getElementById("star").innerHTML = txtStars;
+            //bu dökümanda Id'si star olan paragrafı bul, innerHTML yani paragrafın içine txtStars'ı yazdır.
+        }
+    </script>
+</head>
+
+<body onload="javascript:printStars();">
+<p id="star"></p> <!--bu paragrafın id'si star olsun. name=star deseydik yukarıda getElementByName-->
+</body>
+
+</html>
