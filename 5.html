@@ -12,11 +12,15 @@
         {
             window.alert("Hoşgeldiniz!");
         }
-
         function clickMe() 
         {
-            document.form1.txtTC.value
-            window.alert(document.form1.txtTC.value);
+            var myTC = document.form1.txtTC.value;
+            window.alert("Benim TC Numaram : " + myTC);
+        }
+        function changeCity()
+        {
+            var cityID = document.form1.cmbCity.value;
+            window.location.href="3.html?ID= " + cityID;
         }
     </script>
 
@@ -26,6 +30,21 @@
     <center>
         <form name="form1">
             T.C. No <input type="text" name="txtTC" size="20" maxlength="11">
+            <br /> <br />
+            Şehir
+            <select name="cmbCity" style="width: 200px;" onchange="javascript:changeCity();">
+                <option value="0">Lütfen seçiniz...</option>
+                <option value="1">İstanbul</option>
+                <option value="2">Ankara</option>
+                <option value="3">İzmir</option>
+                <option value="4">Bursa</option>
+            </select>
+            <br /> <br />
+            <input type="text" name="dblFiyat" size="20" maxlength="5">
+            <br /> <br />
+            <input type="text" name="dblKDV" size="20" maxlength="2">
+            <br /> <br />
+            <input type="text" name="dblToplam" size="20" maxlength="5">
             <br /> <br />
             <input type="button" name="btnSubmit" value="Gönder" onclick="javascript:clickMe();">
         </form>
