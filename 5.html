@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Giriş 1</title>
+
+    <script language="JavaScript">
+        function loadMe() 
+        {
+            window.alert("Hoşgeldiniz!");
+        }
+
+        function clickMe() 
+        {
+            document.form1.txtTC.value
+            window.alert(document.form1.txtTC.value);
+        }
+    </script>
+
+</head>
+
+<body onload="javascript:loadMe();">
+    <center>
+        <form name="form1">
+            T.C. No <input type="text" name="txtTC" size="20" maxlength="11">
+            <br /> <br />
+            <input type="button" name="btnSubmit" value="Gönder" onclick="javascript:clickMe();">
+        </form>
+    </center>
+</body>
+
+</html>
