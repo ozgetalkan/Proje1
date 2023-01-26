@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function cinsiyetGöster()
+        {
+            if(document.getElementById('genderMale').checked == true)
+            {
+                window.alert("Erkek");
+            }
+            if (document.getElementById('genderFemale').checked == true)
+            {
+                window.alert("Kadın");
+            }
+        }
+        function daireGöster()
+        {
+            var daire = "";
+            for(var i = 1; i<5; i++)
+            {
+               if (document.getElementById("i").checked == true)
+               {
+                var a = document.getElementById("i").value;
+                daire = daire + a;
+               }
+               window.alert(daire);
+
+            }
+        }
+        function meslekGöster()
+        {
+            var e = document.getElementById("meslek");
+            var text = e.options[e.selectedIndex].text;
+            window.alert(e.value + " " + text );
+
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        Cinsiyetiniz:
+        <input type="radio" id="genderMale" name="rdCinsiyet" value="E">Erkek
+        <input type="radio" id="genderFemale" name="rdCinsiyet" value="K">Kadın
+        <br /> 
+        <input type="button" name="btnCinsiyet" value="Kaydet" onclick="cinsiyetGöster();">
+        <br /><br /> 
+        Daire Türü:
+        <input type="checkbox" id="1" name="chkDaireTuru" value="1">1+1
+        <input type="checkbox" id="2" name="chkDaireTuru" value="2">2+1
+        <input type="checkbox" id="3" name="chkDaireTuru" value="3">3+1
+        <input type="checkbox" id="4" name="chkDaireTuru" value="4">4+1
+        <br /> 
+        <input type="button" name="btnDaire" value="Kaydet" onclick="daireGöster();">
+        <br /><br /> 
+        Mesleğiniz:
+        <select name="drpMeslek" id="meslek">
+            <option value="0">Lütfen seçiniz...</option>
+            <option value="1">Mühendis</option>
+            <option value="2">Doktor</option>
+            <option value="3">Avukat</option>
+            <option value="4">Polis</option>
+            <option value="5">Öğretmen</option>
+        </select>
+        <br /> 
+        <input type="button" name="btnMeslek" value="Kaydet" onclick="meslekGöster();">
+
+    </form>
+</body>
+</html>

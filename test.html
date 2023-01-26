@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function CloseMe()
+        {
+            //window.opener.document.form1.txtName.value="test"; programda blok var. Hoca ayarlardan düzeltmeyi gösterecek.
+            window.opener.location.href="5.html"; //beni açan sayfaya git ve oranın lokasyonunu şu ekrana şu sayfaya yönlendir
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    Test
+    <br><br>
+    <input type="button" name="btnW1" value="Kapat" onclick="javascript:CloseMe();">
+</body>
+</html>

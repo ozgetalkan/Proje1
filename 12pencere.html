@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Window</title>
+    <script language="JavaScript">
+        function openNew()
+        {
+            //window.alert("Burda");
+            //return false;
+
+            //alert(window.screen.width); //ekranın(monitör) genişliğini öğreniriz.
+            //return false; //akışı durdurur kodu burada keser.
+
+            window.open("test.html", "Yeni pencere", "height=500, width=400, top=300, left=500");//adres, başlık, ortalama detayı. sadece asres verirsek yeni sekmede açar.
+        }
+    </script>
+</head>
+<body>
+    <form name="form1"></form>
+    <input teype="text" name="txtName" size="20">
+    <input type="button" name="btn1" value="Pencere Aç" onclick="javascript:openNew();">
+</form>
+</body>
+</html>
